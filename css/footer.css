@@ -1,6 +1,67 @@
 footer {
-  background-color: blue;
-  color: white;
-  text-align: center;
+  background-color: #FFF0BD;
+  color: black;
+  padding: 40px;
+}
+
+table {
+  width: 15%; 
+  border-collapse: collapse;
+  margin: 5px;
+}
+
+#poem {
+  text-align: left;
+  flex-grow: 2;
+}
+
+#poem td{
+  padding-left: 47px;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  opacity: 0.7;
+}
+
+caption img{
+  height: 40px;
+  margin-right: 10px;
+}
+
+footer .table-container{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; 
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+caption {
+  display: inline-flex;                 
+  justify-content: center;         
+  align-items: center; 
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: left;
   padding: 10px;
+  padding-left: 47px;
+}
+
+td {
+  padding: 8px;
+  padding-left: 47px;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  opacity: 0.7;
+}
+
+
+@media (max-width: 768px) {
+  footer .table-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  table {
+      width: 80%; /* Thay đổi độ rộng bảng khi màn hình nhỏ */
+  }
 }
