@@ -1,16 +1,20 @@
 /* Import font Roboto từ Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
-/* Áp dụng font chữ Roboto cho toàn bộ trang */
+/* Reset mặc định */
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  padding: 15px 5%;
   background-color: #fdfaf2;
 }
 
@@ -32,20 +36,28 @@
 }
 
 /* Nhóm menu + Sign in */
+/* Nhóm menu + Sign in */
+/* Nhóm menu + Sign in */
 .nav-right {
   display: flex;
-  align-items: left;
-  gap: 10px; /* Điều chỉnh khoảng cách giữa menu và Sign in */
-  margin-left: auto; /* Đẩy menu + sign in về bên phải */
+  align-items: center;
+  justify-content: flex-end; /* Đẩy toàn bộ menu và nút Sign in về phải */
+  gap: 30px; /* Khoảng cách giữa các mục */
+  flex-grow: 1;
 }
 
 /* Menu */
 .menu {
   display: flex;
   list-style: none;
-  gap: 40px; /* Khoảng cách giữa các mục menu */
-  margin-left: 500px;
+  gap: 30px; /* Khoảng cách giữa các mục menu */
   padding: 0;
+  margin: 0;
+}
+
+/* Đảm bảo Sign in không bị lệch */
+.sign-in {
+  white-space: nowrap; /* Tránh chữ bị xuống dòng */
 }
 
 .menu li {
@@ -55,10 +67,10 @@
 .menu a {
   text-decoration: none;
   color: rgb(0, 0, 0);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  position: relative; /* Cần thiết để tạo hiệu ứng gạch chân */
-  padding-bottom: 5px;
+  position: relative;
+  padding-bottom: 10px;
 }
 
 /* Hiệu ứng gạch chân khi hover */
@@ -67,7 +79,7 @@
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: rgb(4, 0, 255);
+  background-color: blue;
   bottom: 0;
   left: 0;
   transform: scaleX(0);
@@ -87,8 +99,95 @@
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
+  white-space: nowrap; /* Ngăn chữ bị xuống dòng */
 }
 
 .sign-in:hover {
   background-color: #3d2145;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Màn hình nhỏ hơn 1200px (Laptop nhỏ hơn) */
+@media screen and (max-width: 1200px) {
+  .navbar {
+    padding: 15px 3%;
+  }
+
+  .menu {
+    gap: 20px;
+  }
+
+  .sign-in {
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+}
+
+/* Màn hình nhỏ hơn 1024px (Tablet ngang) */
+@media screen and (max-width: 1024px) {
+  .menu {
+    gap: 15px;
+  }
+
+  .menu a {
+    font-size: 16px;
+  }
+
+  .sign-in {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Màn hình nhỏ hơn 768px (Tablet dọc) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sign-in {
+    width: 100%;
+    text-align: center;
+    padding: 12px 30px;
+  }
+}
+
+/* Màn hình nhỏ hơn 480px (Điện thoại) */
+@media screen and (max-width: 480px) {
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo span {
+    font-size: 16px;
+  }
+
+  .menu {
+    gap: 8px;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+
+  .sign-in {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
 }
