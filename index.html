@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/body.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/slideshow.css" />
     <link rel="stylesheet" href="css/section1.css" />
     <link rel="stylesheet" href="css/section2.css" />
   </head>
@@ -18,6 +19,7 @@
 
     <!-- Main Body -->
     <main>
+      <div id="slideshow"></div>
       <div id="section1"></div>
       <div id="section2"></div>
     </main>
@@ -32,6 +34,7 @@
         const content = await res.text();
         document.getElementById(id).innerHTML = content;
       }
+      loadComponent("slideshow", "components/slideshow.html");
       loadComponent("header", "components/header.html");
       loadComponent("section1", "components/section1.html");
       loadComponent("section2", "components/section2.html");
