@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Education</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/body.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/section1.css" />
+    <link rel="stylesheet" href="css/section2.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Main Body -->
+    <main>
+      <div id="section1"></div>
+      <div id="section2"></div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+      // Load từng phần HTML vào trang chính
+      async function loadComponent(id, file) {
+        const res = await fetch(file);
+        const content = await res.text();
+        document.getElementById(id).innerHTML = content;
+      }
+      loadComponent("header", "components/header.html");
+      loadComponent("section1", "components/section1.html");
+      loadComponent("section2", "components/section2.html");
+      loadComponent("footer", "components/footer.html");
+    </script>
+  </body>
+</html>

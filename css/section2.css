@@ -1,0 +1,22 @@
+/* Style chung cho Section 2 */
+#section2 {
+  background-color: #eef7ff;
+  /* Màu khác để phân biệt */
+  border-left: 5px solid #007bff;
+  /* Viền bên trái màu xanh */
+  padding: 40px;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#section2 h2 {
+  color: #007bff;
+  font-size: 2rem;
+}
+
+#section2 p {
+  color: #333;
+  font-size: 1.2rem;
+}
