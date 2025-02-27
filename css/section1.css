@@ -1,22 +1,181 @@
-/* Style chung cho Section 1 */
-#section1 {
-  background-color: #fff3e0;
-  /* Màu nền nhẹ */
-  border-left: 5px solid #ff9800;
-  /* Viền trái màu cam */
-  padding: 40px;
-  margin: 20px auto;
-  width: 80%;
+.body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+/* purple block in center */
+.purple-section {
+  background-color: #5a2a82;
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  color: white;
+  text-align: center;
+  margin: 40px auto;
 }
 
-#section1 h2 {
-  color: #ff9800;
-  font-size: 2rem;
+.aim-course {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-#section1 p {
-  color: #444;
-  font-size: 1.2rem;
+.purple-card {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 320px;
+}
+
+.purple-card img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.card-content {
+  flex: 1;
+  max-width: 250px;
+}
+
+h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: white;
+}
+
+p {
+  margin: 0;
+  font-size: 0.9em;
+  color: white;
+  /* margin: 0;
+  font-size: 0.9em;
+  color: white;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: visible; */
+}
+/* Our Tracks */
+.tracks-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tracks-section h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tracks-section p {
+  font-size: 1em;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* Course Card */
+.course-container {
+  display: flex;
+  justify-content: space-between; /* Cách đều các card */
+  gap: 20px; /* Khoảng cách giữa các card */
+}
+.wrapper-card {
+  width: 320px; /* Định kích thước lớn hơn card bên trong */
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.course-card {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.course-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.course-content {
+  padding: 1px;
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-category {
+  color: gray;
+  font-size: 0.9em;
+}
+
+.course-star {
+  font-size: 0.9em;
+  color: orange;
+}
+.course-title {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.course-price {
+  font-size: 1.2em;
+  color: orange;
+  font-weight: bold;
+}
+
+.course-info {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.9em;
+  color: gray;
+  margin: 10px 0;
+}
+
+.join-button {
+  /* background-color: orange;
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 20px;
+  width: 50%;
+  cursor: pointer;
+  font-size: 1em; */
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  width: 50%;
+  cursor: pointer;
+  font-size: 1em;
+  display: block;
+  margin: 10px auto; /* Căn giữa */
+  text-align: center;
+}
+
+.join-button:hover {
+  background-color: darkorange;
 }
