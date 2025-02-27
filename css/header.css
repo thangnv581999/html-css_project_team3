@@ -16,6 +16,7 @@
   align-items: center;
   padding: 15px 5%;
   background-color: #fff0bd;
+
 }
 
 /* Logo */
@@ -41,8 +42,10 @@
 .nav-right {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Đẩy toàn bộ menu và nút Sign in về phải */
-  gap: 30px; /* Khoảng cách giữa các mục */
+  justify-content: flex-end;
+  /* Đẩy toàn bộ menu và nút Sign in về phải */
+  gap: 30px;
+  /* Khoảng cách giữa các mục */
   flex-grow: 1;
 }
 
@@ -50,14 +53,16 @@
 .menu {
   display: flex;
   list-style: none;
-  gap: 30px; /* Khoảng cách giữa các mục menu */
+  gap: 30px;
+  /* Khoảng cách giữa các mục menu */
   padding: 0;
   margin: 0;
 }
 
 /* Đảm bảo Sign in không bị lệch */
 .sign-in {
-  white-space: nowrap; /* Tránh chữ bị xuống dòng */
+  white-space: nowrap;
+  /* Tránh chữ bị xuống dòng */
 }
 
 .menu li {
@@ -99,7 +104,8 @@
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
-  white-space: nowrap; /* Ngăn chữ bị xuống dòng */
+  white-space: nowrap;
+  /* Ngăn chữ bị xuống dòng */
 }
 
 .sign-in:hover {
