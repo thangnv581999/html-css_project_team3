@@ -160,9 +160,12 @@ p {
   background: white;
   border-radius: 12px;
   padding: 10px;
+  margin-left: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   /* ---------------------------------- */
   width: 320px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .course-image {
@@ -226,8 +229,14 @@ p {
   text-align: center;
 }
 
+/* hover effect */
 .join-button:hover {
   background-color: darkorange;
+}
+
+.course-card:hover {
+  transform: scale(1.10);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .top-image {
