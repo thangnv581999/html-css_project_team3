@@ -29,3 +29,11 @@ function updateSlide() {
 // Cập nhật số thứ tự slide hiện tại
 document.getElementById("current-slide").textContent = currentIndex + 1;
 document.getElementById("total-slides").textContent = totalSlides;
+
+
+
+
+
+
+
+
