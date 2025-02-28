@@ -1,22 +1,280 @@
-/* Style chung cho Section 2 */
-#section2 {
-  background-color: #eef7ff;
-  /* Màu khác để phân biệt */
-  border-left: 5px solid #007bff;
-  /* Viền bên trái màu xanh */
-  padding: 40px;
-  margin: 20px auto;
-  width: 80%;
+h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.part-1{
+  margin-bottom: 50px;
+}
+
+.part-1 > h1{
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 34px;
+}
+
+.part-2 > h1{
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 34px;
+}
+
+.title-discription{
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #888888;
+  margin-top: 0px;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  height: 160px;
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 0px 8px 1px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 10px 15px 0px 20px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {   
+  box-shadow: 0 0px 16px 1px rgba(0,0,0,0.2);
+}
+
+.person {
+  display: flex; /* Căn theo hàng ngang */
+  gap: 15px; /* Khoảng cách giữa avatar và nội dung */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.person > img{
+  width: 40px; /* Điều chỉnh kích thước avatar */
+  height: 40px;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.card-content{
+  font-size: 14px;
+  color: #bbb;
+}
+
+.person-name{
+  font-size: 14px;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.person-role{
+  font-size: 10px;
+  margin: 2px;
+}
+
+.text > p{
+  color: black;
+}
+
+
+.dots {
+  display: flex;
+  justify-content: center; /* Căn giữa dot theo chiều ngang */
+  margin-top: 20px; /* Tạo khoảng cách giữa card và dot */
+}
+
+.dot {
+  cursor: pointer;
+  height: 9px;
+  width: 9px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  justify-items: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.dot:hover {
+  background-color: blueviolet;
+  width: 25px;
+  border-radius: 5px;
+}
+
+.cards-1{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.card-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 330px;
+  height: 330px;
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 0px 8px 1px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#section2 h2 {
-  color: #007bff;
-  font-size: 2rem;
+/* On mouse-over, add a deeper shadow */
+.card-1:hover {   
+  box-shadow: 0 0px 16px 1px rgba(0,0,0,0.2);
 }
 
-#section2 p {
+.card-1 > img{
+  width: 100%;
+  height: 190px;
+  border-radius: 10px;
+}
+
+.card-1 > p{
+  text-align: left;
+}
+
+.card-1-header{
+  margin-bottom: 5px;
+}
+
+.card-1-header > p:nth-of-type(1){
+  color: black;
+  text-align: left;
+}
+
+.card-1-header > p:nth-of-type(2){
+  text-align: left;
+}
+
+.card-1-person-name{
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.card-1-person-info{
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #bbb;
+}
+
+.card-1-content{
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #c9c9c9;
+}
+
+.card-1-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.card-1-person-role{
+  font-size: 14px;
+  color: orange;
+  margin: 0px;
+}
+
+.card-1-bottom > div > a > img{
+  height: 25px;
+  width: 25px;
+  background-color: #ececec;
+  justify-content: center;
+}
+
+.card-1-bottom > div > a{
+  margin: 0px 3px 0px 3px;
+  text-decoration: none;
+}
+
+.subcribe-object{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding: auto;
+}
+
+.subcribe-object > img {
+  background: rgba(86, 44, 131, 0.9);
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  color: white;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+
+.overlay > h1{
+  font-size: 34px;
+}
+
+.overlay > p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.subcribe-object-input{
+  margin-top: 20px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.subcribe-object-input > input {
+  flex: 1;
+  border: none;
+  padding: 10px 20px;
+  height: 55px;
+  width: 400px;
+  border-radius: 50px;
+  outline: none;
+  font-size: 14px;
   color: #333;
-  font-size: 1.2rem;
+}
+
+.subcribe-object-input > button{
+  background: #ff6b35;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  height: 46px;
+  width: 150px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+  position: absolute;
+  margin-right: 5px;
 }
