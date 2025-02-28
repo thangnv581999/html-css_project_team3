@@ -1,8 +1,8 @@
 h1{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 p{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .part-1{
@@ -23,7 +23,7 @@ p{
 
 .title-discription{
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #888888;
   margin-top: 0px;
 }
