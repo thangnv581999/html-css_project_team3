@@ -6,7 +6,7 @@ footer {
 }
 
 table {
-  width: 15%; 
+  width: 15%;
   border-collapse: collapse;
   margin: 5px;
 }
@@ -16,30 +16,30 @@ table {
   flex-grow: 2;
 }
 
-#poem td{
+#poem td {
   padding-left: 47px;
   text-align: left;
   font-family: 'Times New Roman', Times, serif;
   opacity: 0.7;
 }
 
-caption img{
+caption img {
   height: 40px;
   margin-right: 10px;
 }
 
-footer .table-container{
+footer .table-container {
   display: flex;
   justify-content: space-between;
-  gap: 10px; 
+  gap: 10px;
   flex-wrap: wrap;
   margin: 20px;
 }
 
 caption {
-  display: inline-flex;                 
-  justify-content: center;         
-  align-items: center; 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.4em;
   font-weight: bold;
   text-align: left;
@@ -63,20 +63,22 @@ div .line {
   margin: 20px 0;
 }
 
-p {
+.line p {
   margin-top: 10px;
   text-align: center;
   opacity: 0.7;
+  color: black;
 }
 
 
 @media (max-width: 768px) {
   footer .table-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   table {
-      width: 80%; /* Thay đổi độ rộng bảng khi màn hình nhỏ */
+    width: 80%;
+    /* Thay đổi độ rộng bảng khi màn hình nhỏ */
   }
 }
