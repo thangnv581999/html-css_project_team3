@@ -14,9 +14,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 5%;
+  padding: 10px 5%;
   background-color: #fff0bd;
-
 }
 
 /* Logo */
@@ -26,9 +25,10 @@
 }
 
 .logo img {
-  width: 80px;
-  height: 80px;
-  margin-right: 10px;
+  width: 170px;
+  height: 50px;
+  top: 54px;
+  left: 196px;
 }
 
 .logo span {
@@ -36,8 +36,6 @@
   font-weight: bold;
 }
 
-/* Nhóm menu + Sign in */
-/* Nhóm menu + Sign in */
 /* Nhóm menu + Sign in */
 .nav-right {
   display: flex;
@@ -59,7 +57,6 @@
   margin: 0;
 }
 
-/* Đảm bảo Sign in không bị lệch */
 .sign-in {
   white-space: nowrap;
   /* Tránh chữ bị xuống dòng */
@@ -72,8 +69,8 @@
 .menu a {
   text-decoration: none;
   color: rgb(0, 0, 0);
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: none;
   position: relative;
   padding-bottom: 10px;
 }
@@ -102,7 +99,7 @@
   padding: 12px 30px;
   border-radius: 30px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
   white-space: nowrap;
   /* Ngăn chữ bị xuống dòng */
