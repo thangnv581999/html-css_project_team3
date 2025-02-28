@@ -406,10 +406,13 @@ p {
   transform: translateX(0px);  /* Đưa phần tử về vị trí ban đầu */
 }
 
-.background-container {
+.background-container,
+.foreground-image,
+.content,
+.features {
   opacity: 0;
   transform: translateX(-100%); /* Di chuyển phần tử ra ngoài màn hình */
-  transition: opacity 2.5s ease-out, transform 2.5s ease-out;
+  transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
 
