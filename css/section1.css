@@ -349,12 +349,14 @@ p {
   bottom: 20px;
   width: 20%;
   /* Điều chỉnh kích thước ảnh i2 */
+  max-width: 300px;
 }
 
 .content {
   flex: 1;
   padding-left: 40%;
   /* Đẩy nội dung qua phải để tránh chồng lên i2 */
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
 .content h2 {
@@ -391,6 +393,23 @@ p {
 
 .feature .text {
   font-size: 16px;
+}
+
+
+
+/* Các phần tử hiển thị khi có lớp 'in-view' */
+.background-container.in-view,
+.foreground-image.in-view,
+.content.in-view,
+.features.in-view {
+  opacity: 1;
+  transform: translateX(0px);  /* Đưa phần tử về vị trí ban đầu */
+}
+
+.background-container {
+  opacity: 0;
+  transform: translateX(-100%); /* Di chuyển phần tử ra ngoài màn hình */
+  transition: opacity 2.5s ease-out, transform 2.5s ease-out;
 }
 
 
