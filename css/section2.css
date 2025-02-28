@@ -1,3 +1,5 @@
+
+
 h1{
   font-family: "Roboto", sans-serif;
 }
@@ -7,6 +9,7 @@ p{
 
 .part-1{
   margin-bottom: 50px;
+  background-color: antiquewhite;
 }
 
 .part-1 > h1{
@@ -46,10 +49,12 @@ p{
   box-shadow: 0 0px 8px 1px rgba(0,0,0,0.2);
   transition: 0.3s;
   padding: 10px 15px 0px 20px;
+  background-color: white;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {   
+  
   box-shadow: 0 0px 16px 1px rgba(0,0,0,0.2);
 }
 
@@ -133,10 +138,12 @@ p{
   transition: 0.3s;
   padding: 10px;
   border-radius: 10px;
+  
 }
 
 /* On mouse-over, add a deeper shadow */
 .card-1:hover {   
+  transform: scale(1.10);
   box-shadow: 0 0px 16px 1px rgba(0,0,0,0.2);
 }
 
@@ -195,7 +202,8 @@ p{
 
 .card-1-person-role{
   font-size: 14px;
-  color: orange;
+  font-weight: bold;
+  color: rgb(255, 64, 0);
   margin: 0px;
 }
 
@@ -216,13 +224,13 @@ p{
   display: flex;
   justify-content: center;
   margin-top: 100px;
-  padding: auto;
+  
 }
 
 .subcribe-object > img {
   background: rgba(86, 44, 131, 0.9);
-  width: 100%;
-  height: 300px;
+  width: 70%;
+  
   border-radius: 10px;
 }
 
@@ -234,7 +242,8 @@ p{
 }
 
 .overlay > h1{
-  font-size: 34px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .overlay > p{
@@ -242,22 +251,23 @@ p{
   margin-bottom: 10px;
   color: white;
   font-weight: bold;
+  text-align: center;
 }
 
 .subcribe-object-input{
-  margin-top: 20px;
+  margin-top:150px;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  height: 50px;
+  
 }
 
 .subcribe-object-input > input {
   flex: 1;
   border: none;
   padding: 10px 20px;
-  height: 55px;
-  width: 400px;
   border-radius: 50px;
   outline: none;
   font-size: 14px;
@@ -269,12 +279,118 @@ p{
   border: none;
   color: white;
   padding: 10px 20px;
-  height: 46px;
-  width: 150px;
   border-radius: 50px;
   cursor: pointer;
   font-size: 14px;
   transition: background 0.3s;
   position: absolute;
   margin-right: 5px;
+}
+
+
+
+@media screen and (min-width: 992px) {
+  .subcribe-object > img {
+    height: 300px;
+  }
+
+  .subcribe-object-input{
+    width: 450px;
+  }
+
+  .subcribe-object-input > input {
+    height: 100%;
+    width: 100%;
+  }
+
+  .subcribe-object-input > button{
+    height: 85%;
+    width: 30%;
+  }
+}
+
+
+/* --- Thêm các phần Responsive --- */
+
+/* Ví dụ: Dưới 992px (tablet trở xuống) */
+@media screen and (max-width: 992px) {
+  .cards, .cards-1 {
+    flex-wrap: wrap;
+  }
+
+  /* Card nhỏ hơn khi trên màn hình hẹp */
+  .card-1 {
+    width: 100%;
+    max-width: 400px; /* Giới hạn chiều rộng tối đa */
+    margin-bottom: 20px; /* Tạo khoảng cách giữa các dòng */
+  }
+
+  
+
+  /* Điều chỉnh kích thước ảnh trong .card-1 cho vừa khung */
+  .card-1 > img {
+    height: auto;
+  }
+
+  /*  */
+  .subcribe-object > img {
+    height: 300px;
+  }
+
+  .subcribe-object-input{
+    width: 300px;
+  }
+
+  .subcribe-object-input > input {
+    height: 100%;
+    
+  }
+
+  .subcribe-object-input > button{
+    height: 85%;
+    width: 30%;
+  }
+
+}
+
+/* Ví dụ: Dưới 576px (mobile) */
+@media screen and (max-width: 576px) {
+  .cards, .cards-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card, .card-1 {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .subcribe-object > img {
+    width: 90%;
+    height: auto;
+  }
+
+  .overlay > h1 {
+    font-size: 24px;
+  }
+
+/*  */
+.subcribe-object > img {
+  height: 250px;
+}
+
+.subcribe-object-input{
+  width: 300px;
+}
+
+.subcribe-object-input > input {
+  height: 100%;
+  
+}
+
+.subcribe-object-input > button{
+  height: 85%;
+  width: 30%;
+}
+
 }
