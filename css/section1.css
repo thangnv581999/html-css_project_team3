@@ -8,6 +8,7 @@
   height: 100vh;
   background-color: #f5f5f5;
 }
+
 /* purple block in center */
 .purple-section {
   background-color: #5a2a82;
@@ -18,6 +19,8 @@
   color: white;
   text-align: center;
   margin: 40px auto;
+  position: relative;
+  top: -150px;
 }
 
 .aim-course {
@@ -62,8 +65,17 @@ p {
 
 /* Our Tracks */
 .tracks-section {
+  position: relative;
   text-align: center;
+  padding: 20px 0;
   margin-bottom: 40px;
+  margin-top: -150px;
+}
+
+.tracks-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .tracks-section h2 {
@@ -79,25 +91,59 @@ p {
   margin: 0 auto;
 }
 
+/* setup icon */
+.lamp-icon,
+.arrow-icon {
+  width: 100px;
+  height: auto;
+}
+
+.lamp-icon {
+  position: absolute;
+  left: -3px;
+  /* Đẩy icon ra ngoài gần lề */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow-icon {
+  position: absolute;
+  right: -3px;
+  /* Đẩy icon ra ngoài gần lề */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /* Course Card */
 .wrapper-card {
-  margin: 80px;
+  margin: 40px;
   /*  */
 }
 
 .course-container {
   display: flex;
-  justify-content: space-between; /* Cách đều các card */
-  gap: 20px; /* Khoảng cách giữa các card */
+  gap: 20px;
+  /* Khoảng cách giữa các card */
+  gap: 20px;
+  /* Khoảng cách giữa các card */
+  /* ------------------------------- */
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Căn giữa card */
+  max-width: 1200px;
+  /* Giới hạn chiều rộng để tránh card bị giãn */
+  margin: 0 auto;
+  /* Căn giữa container */
+
 }
 
 .course-card {
-  width: 100%;
   background: white;
   border-radius: 12px;
   padding: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-
+  /* ---------------------------------- */
+  width: 320px;
 }
 
 .course-image {
@@ -126,6 +172,7 @@ p {
   font-size: 0.9em;
   color: orange;
 }
+
 .course-title {
   font-size: 1.2em;
   margin: 5px 0;
@@ -155,10 +202,216 @@ p {
   cursor: pointer;
   font-size: 1em;
   display: block;
-  margin: 10px auto; /* Căn giữa */
+  margin: 10px auto;
+  /* Căn giữa */
   text-align: center;
 }
 
 .join-button:hover {
   background-color: darkorange;
+}
+
+.top-image {
+  width: 100%;
+  /* Đặt chiều rộng hình ảnh */
+  height: auto;
+  /* Đảm bảo tỷ lệ hình ảnh */
+  margin-bottom: 20px;
+  /* Khoảng cách giữa hình ảnh và khung màu tím */
+}
+
+/* Responsive for purple block */
+/* ----------------------------- */
+.purple-section {
+  background-color: #5a2a82;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 1200px;
+  /* Giới hạn chiều rộng tối đa */
+  color: white;
+  text-align: center;
+  margin: 40px auto;
+  /* Canh giữa */
+}
+
+/* Responsive for tablet */
+@media screen and (max-width: 1024px) {
+  .purple-section {
+    width: 90%;
+    /* Giữ khoảng cách đều 2 bên */
+    padding: 20px;
+  }
+
+  .aim-course {
+    flex-direction: column;
+    /* Xếp dọc thay vì ngang */
+    gap: 20px;
+    /* Thêm khoảng cách giữa các phần */
+  }
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 768px) {
+  .purple-section {
+    width: 95%;
+    /* Gần sát lề nhưng vẫn có khoảng trống */
+    padding: 15px;
+  }
+
+  .aim-course {
+    flex-direction: column;
+  }
+
+  .purple-card {
+    flex-direction: column;
+    /* Icon và text xếp dọc */
+    text-align: center;
+    max-width: 100%;
+    /* Giãn full màn hình */
+  }
+
+  .purple-card img {
+    margin: 0 auto 10px;
+    /* Căn giữa icon */
+  }
+}
+
+/* Responsive for course card */
+/* --------------------------------- */
+/* Responsive: Tablet */
+@media screen and (max-width: 1024px) {
+  .course-container {
+    justify-content: center;
+    /* Đảm bảo căn giữa */
+  }
+}
+
+/* Responsive: Mobile */
+@media screen and (max-width: 768px) {
+  .course-container {
+    flex-direction: column;
+    /* Đưa card xuống hàng */
+    align-items: center;
+    /* Căn giữa card */
+  }
+}
+
+
+
+/* background */
+
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 390px;
+  background: url('/img/slide/i1.png') no-repeat center center;
+  background-size: cover;
+  /* Để ảnh nền phủ toàn bộ */
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.foreground-image {
+  position: absolute;
+  left: 80px;
+  /* Điều chỉnh vị trí ảnh i2 */
+  bottom: 20px;
+  width: 20%;
+  /* Điều chỉnh kích thước ảnh i2 */
+}
+
+.content {
+  flex: 1;
+  padding-left: 40%;
+  /* Đẩy nội dung qua phải để tránh chồng lên i2 */
+}
+
+.content h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.content span {
+  color: #ff6600;
+}
+
+.features {
+  margin-top: 20px;
+}
+
+.feature p {
+  color: black;
+  opacity: 0.5;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+}
+
+.feature img {
+  width: 70px;
+  margin-right: 30px;
+  border: solid;
+  border-radius: 10px;
+}
+
+.feature .text {
+  font-size: 16px;
+}
+
+
+/* Mobile (dưới 768px) */
+@media screen and (max-width: 768px) {
+  .background-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .foreground-image {
+    position: static;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .content {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature img {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+
+/* Tablet (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .content {
+    padding-left: 20%;
+  }
+
+  .foreground-image {
+    left: 40px;
+    width: 30%;
+  }
 }
