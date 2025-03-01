@@ -36,21 +36,25 @@
       }
 
       // Wait until the DOM is ready before loading components
-      document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener("DOMContentLoaded", function () {
         loadComponent("slideshow", "components/slideshow.html");
         loadComponent("header", "components/header.html");
         loadComponent("section1", "components/section1.html");
         loadComponent("section2", "components/section2.html");
         loadComponent("footer", "components/footer.html");
-        
+
         // After loading the components, load the JS files
-        const scriptSlideshow = document.createElement('script');
+        const scriptSlideshow = document.createElement("script");
         scriptSlideshow.src = "/js/slideshow.js";
         document.body.appendChild(scriptSlideshow);
 
-        const scriptSection1 = document.createElement('script');
+        const scriptSection1 = document.createElement("script");
         scriptSection1.src = "/js/section1.js";
         document.body.appendChild(scriptSection1);
+
+        const scriptSection2 = document.createElement("script");
+        scriptSection2.src = "/js/section2.js";
+        document.body.appendChild(scriptSection2);
       });
     </script>
   </body>
