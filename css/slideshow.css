@@ -55,9 +55,9 @@
   /* Đưa vào trong ảnh */
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.5);
+
   /* Nền mờ để dễ nhìn */
-  padding: 3px;
+
   border-radius: 20px;
 }
 
@@ -70,6 +70,7 @@
   display: inline-block;
   cursor: pointer;
   transition: background-color 0.3s;
+
 }
 
 .dot.active {

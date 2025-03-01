@@ -339,7 +339,8 @@ p {
   /* Để ảnh nền phủ toàn bộ */
   display: flex;
   align-items: center;
-  padding: 0 50px;
+  padding: 50px;
+  margin-top: 20px;
 }
 
 .foreground-image {
@@ -403,7 +404,8 @@ p {
 .content.in-view,
 .features.in-view {
   opacity: 1;
-  transform: translateX(0px);  /* Đưa phần tử về vị trí ban đầu */
+  transform: translateX(0px);
+  /* Đưa phần tử về vị trí ban đầu */
 }
 
 .background-container,
@@ -411,7 +413,8 @@ p {
 .content,
 .features {
   opacity: 0;
-  transform: translateX(-100%); /* Di chuyển phần tử ra ngoài màn hình */
+  transform: translateX(-100%);
+  /* Di chuyển phần tử ra ngoài màn hình */
   transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
