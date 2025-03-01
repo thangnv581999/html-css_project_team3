@@ -142,30 +142,31 @@ p {
 .course-container {
   display: flex;
   gap: 20px;
-  /* Khoảng cách giữa các card */
-  gap: 20px;
-  /* Khoảng cách giữa các card */
-  /* ------------------------------- */
   flex-wrap: wrap;
   justify-content: center;
-  /* Căn giữa card */
   max-width: 1200px;
-  /* Giới hạn chiều rộng để tránh card bị giãn */
   margin: 0 auto;
-  /* Căn giữa container */
-
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .course-card {
   background: white;
   border-radius: 12px;
   padding: 10px;
-  margin-left: 20px;
+  margin: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  /* ---------------------------------- */
   width: 320px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.course-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .course-image {

@@ -1,24 +1,29 @@
 // Lấy tất cả các phần tử cần thêm hiệu ứng 'in-view'
 const elements = document.querySelectorAll('.background-container, .foreground-image, .content, .features');
+const courseCards = document.querySelectorAll('.course-card'); // Lấy tất cả các card
 
 // Hàm kiểm tra khi cuộn trang
 function checkVisibility() {
-  elements.forEach((element, index) => {
-    // Kiểm tra nếu element tồn tại
+  elements.forEach((element) => {
     if (!element) return;
 
-    // Lấy thông tin về vị trí của phần tử
     const rect = element.getBoundingClientRect();
-
-    // Thêm buffer để tránh bị mất khi gần hết vùng nhìn thấy
     if (rect.top <= window.innerHeight + 100 && rect.bottom >= 0) {
-      // Thêm lớp 'in-view' để kích hoạt hiệu ứng
       element.classList.add('in-view');
-      // Thêm thời gian delay khác nhau cho mỗi phần tử
-      element.style.transitionDelay = `${index * 0.3}s`; // Delay 0s cho phần tử đầu tiên, 0.3s cho phần tử thứ hai, v.v.
     } else {
-      // Loại bỏ lớp 'in-view' khi phần tử không còn trong vùng nhìn thấy
       element.classList.remove('in-view');
+    }
+  });
+
+  // Kiểm tra và thêm hiệu ứng cho từng card
+  courseCards.forEach((card, index) => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top <= window.innerHeight + 100 && rect.bottom >= 0) {
+      card.classList.add('in-view');
+      card.style.transitionDelay = `${index * 1}s`; // Delay 1s cho mỗi card
+    } else {
+      card.classList.remove('in-view'); // Loại bỏ lớp in-view khi không còn trong viewport
+      card.style.transitionDelay = '0s'; // Đặt lại độ trễ khi không còn trong viewport
     }
   });
 }
