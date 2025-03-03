@@ -56,3 +56,26 @@ window.addEventListener('scroll', checkCardVisibility);
 
 // Kiểm tra ngay khi tải trang để đảm bảo phần tử hiển thị nếu nó có sẵn trong viewport
 window.addEventListener('load', checkCardVisibility);
+
+// Lấy tất cả các thẻ card-1
+const trackCards = document.querySelectorAll('.card-1');
+
+// Hàm kiểm tra khi cuộn trang
+function checkTrackCardVisibility() {
+    trackCards.forEach((card, index) => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+            setTimeout(() => {
+                card.classList.add('in-view');
+            }, index * 300); // Delay 300ms cho mỗi card (card 1: 0ms, card 2: 300ms, card 3: 600ms)
+        } else {
+            card.classList.remove('in-view');
+        }
+    });
+}
+
+// Gọi hàm kiểm tra mỗi khi cuộn trang
+window.addEventListener('scroll', checkTrackCardVisibility);
+
+// Kiểm tra ngay khi tải trang để đảm bảo phần tử hiển thị nếu nó có sẵn trong viewport
+window.addEventListener('load', checkTrackCardVisibility);

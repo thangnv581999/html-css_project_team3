@@ -159,7 +159,14 @@ p {
   transition: 0.3s;
   padding: 10px;
   border-radius: 10px;
+  opacity: 0; /* Bắt đầu với độ mờ */
+  transform: translateY(20px); /* Đẩy xuống một chút */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Thêm hiệu ứng chuyển đổi */
+}
 
+.card-1.in-view {
+  opacity: 1; /* Hiển thị khi có lớp in-view */
+  transform: translateY(0); /* Đưa về vị trí ban đầu */
 }
 
 /* On mouse-over, add a deeper shadow */
