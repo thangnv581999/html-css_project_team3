@@ -67,7 +67,7 @@ function checkTrackCardVisibility() {
         if (rect.top <= window.innerHeight && rect.bottom >= 0) {
             setTimeout(() => {
                 card.classList.add('in-view');
-            }, index * 300); // Delay 300ms cho mỗi card (card 1: 0ms, card 2: 300ms, card 3: 600ms)
+            }, (trackCards.length - index - 1) * 1000); // Delay 1 giây cho mỗi card (card 3: 0ms, card 2: 1000ms, card 1: 2000ms)
         } else {
             card.classList.remove('in-view');
         }
