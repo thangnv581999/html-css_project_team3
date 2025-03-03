@@ -1,5 +1,5 @@
 // Lấy tất cả các phần tử cần thêm hiệu ứng 'in-view'
-const elements = document.querySelectorAll('.background-container, .foreground-image, .content, .features');
+const elements = document.querySelectorAll('.background-container, .foreground-image, .content, .features, .purple-section, .top-image');
 const courseCards = document.querySelectorAll('.course-card'); // Lấy tất cả các card
 const lampIcon = document.querySelector('.lamp-icon'); // Lấy biểu tượng lamp
 const arrowIcon = document.querySelector('.arrow-icon'); // Lấy biểu tượng arrow

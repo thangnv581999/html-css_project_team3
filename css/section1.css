@@ -33,6 +33,14 @@
   margin: 40px auto;
   position: relative;
   top: -150px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.purple-section.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .aim-course {
@@ -253,6 +261,14 @@ p {
   /* Đảm bảo tỷ lệ hình ảnh */
   margin-bottom: 20px;
   /* Khoảng cách giữa hình ảnh và khung màu tím */
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.top-image.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Responsive for purple block */
@@ -358,6 +374,14 @@ p {
   width: 20%;
   /* Điều chỉnh kích thước ảnh i2 */
   max-width: 300px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.foreground-image.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .content {
