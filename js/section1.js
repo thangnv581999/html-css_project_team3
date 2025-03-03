@@ -22,7 +22,7 @@ function checkVisibility() {
     const rect = card.getBoundingClientRect();
     if (rect.top <= window.innerHeight + 100 && rect.bottom >= 0) {
       card.classList.add('in-view');
-      card.style.transitionDelay = `${index * 0.5}s`; // Delay 0.5s cho mỗi card
+      card.style.transitionDelay = `${index * 1}s`; // Delay 1s cho mỗi card
     } else {
       card.classList.remove('in-view'); // Loại bỏ lớp in-view khi không còn trong viewport
       card.style.transitionDelay = '0s'; // Đặt lại độ trễ khi không còn trong viewport
@@ -30,12 +30,27 @@ function checkVisibility() {
   });
 
   // Kiểm tra sự xuất hiện của lamp-icon và arrow-icon
-  [lampIcon, arrowIcon].forEach(icon => {
+  [lampIcon, arrowIcon].forEach((icon, index) => {
     const rect = icon.getBoundingClientRect();
     if (rect.top <= window.innerHeight + 100 && rect.bottom >= 0) {
       icon.classList.add('in-view');
+      icon.style.transitionDelay = `${index * 1}s`; // Delay 1s cho mỗi icon
     } else {
       icon.classList.remove('in-view');
+    }
+  });
+
+  // Kiểm tra sự xuất hiện của purple-section và top-image
+  const purpleSection = document.querySelector('.purple-section');
+  const topImage = document.querySelector('.top-image');
+
+  [purpleSection, topImage].forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    if (rect.top <= window.innerHeight + 100 && rect.bottom >= 0) {
+      element.classList.add('in-view');
+      element.style.transitionDelay = '1s'; // Delay 1s cho purple-section và top-image
+    } else {
+      element.classList.remove('in-view');
     }
   });
 }
