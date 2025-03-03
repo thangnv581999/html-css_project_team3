@@ -1,10 +1,23 @@
 let currentIndex = 0;
+let autoSlideInterval; // Variable to hold the interval ID
+
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    moveSlide(1); // Move to the next slide
+  }, 3000); // Change slide every 3 seconds
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval); // Stop the automatic sliding
+}
 
 function moveSlide(direction) {
+  stopAutoSlide(); // Stop auto sliding when user interacts
   const slides = document.querySelectorAll(".slide");
   const totalSlides = slides.length;
   currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
   updateSlide();
+  startAutoSlide(); // Restart auto sliding
 }
 
 function setSlide(index) {
@@ -29,6 +42,9 @@ function updateSlide() {
 // Cập nhật số thứ tự slide hiện tại
 document.getElementById("current-slide").textContent = currentIndex + 1;
 document.getElementById("total-slides").textContent = totalSlides;
+
+// Call startAutoSlide when the page loads
+startAutoSlide();
 
 
 
