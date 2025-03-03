@@ -115,20 +115,26 @@ p {
 .arrow-icon {
   width: 100px;
   height: auto;
+  position: absolute; /* Giữ nguyên vị trí tuyệt đối */
+  opacity: 0; /* Bắt đầu với độ mờ */
+  transform: translateY(-20px); /* Đẩy lên một chút */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Thêm hiệu ứng chuyển đổi */
+}
+
+.lamp-icon.in-view,
+.arrow-icon.in-view {
+  opacity: 1; /* Hiển thị khi có lớp in-view */
+  transform: translateY(0); /* Đưa về vị trí ban đầu */
 }
 
 .lamp-icon {
-  position: absolute;
-  left: -3px;
-  /* Đẩy icon ra ngoài gần lề */
+  left: -3px; /* Đẩy icon ra ngoài gần lề */
   top: 50%;
   transform: translateY(-50%);
 }
 
 .arrow-icon {
-  position: absolute;
-  right: -3px;
-  /* Đẩy icon ra ngoài gần lề */
+  right: -3px; /* Đẩy icon ra ngoài gần lề */
   top: 50%;
   transform: translateY(-50%);
 }
