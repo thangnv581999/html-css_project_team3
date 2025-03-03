@@ -30,32 +30,37 @@
 
     <script>
       // Load từng phần HTML vào trang chính
-      async function loadComponent(id, file) {
+      // Load từng phần HTML vào trang chính
+      async function loadComponent(id, file, callback) {
         const res = await fetch(file);
         const content = await res.text();
         document.getElementById(id).innerHTML = content;
+        if (callback) callback(); // Gọi callback sau khi tải xong HTML
       }
 
       // Wait until the DOM is ready before loading components
       document.addEventListener("DOMContentLoaded", function () {
-        loadComponent("slideshow", "components/slideshow.html");
+        loadComponent("slideshow", "components/slideshow.html", () => {
+          const scriptSlideshow = document.createElement("script");
+          scriptSlideshow.src = "./js/slideshow.js";
+          document.body.appendChild(scriptSlideshow);
+        });
+
         loadComponent("header", "components/header.html");
-        loadComponent("section1", "components/section1.html");
-        loadComponent("section2", "components/section2.html");
+
+        loadComponent("section1", "components/section1.html", () => {
+          const scriptSection1 = document.createElement("script");
+          scriptSection1.src = "./js/section1.js";
+          document.body.appendChild(scriptSection1);
+        });
+
+        loadComponent("section2", "components/section2.html", () => {
+          const scriptSection2 = document.createElement("script");
+          scriptSection2.src = "./js/section2.js";
+          document.body.appendChild(scriptSection2);
+        });
+
         loadComponent("footer", "components/footer.html");
-
-        // After loading the components, load the JS files
-        const scriptSlideshow = document.createElement("script");
-        scriptSlideshow.src = "./js/slideshow.js";
-        document.body.appendChild(scriptSlideshow);
-
-        const scriptSection1 = document.createElement("script");
-        scriptSection1.src = "./js/section1.js";
-        document.body.appendChild(scriptSection1);
-
-        const scriptSection2 = document.createElement("script");
-        scriptSection2.src = "./js/section2.js";
-        document.body.appendChild(scriptSection2);
       });
     </script>
   </body>
