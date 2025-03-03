@@ -415,3 +415,15 @@ p {
   }
 
 }
+
+.icon-container {
+  display: flex;
+  justify-content: space-between; /* Căn giữa các icon */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin: 20px 0; /* Khoảng cách trên và dưới */
+}
+
+.track-icon {
+  width: 100px; /* Tăng kích thước của icon lên 100px */
+  height: auto; /* Đảm bảo tỷ lệ hình ảnh */
+}
